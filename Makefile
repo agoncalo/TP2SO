@@ -15,7 +15,3 @@ all: $(TLIB)
 $(TLIB): $(OBJ)
 	$(CC) $(LDFLAGS) -lm -o $@ $^; \
 	$(CC) teste.c -o teste -ltp2so
-
-.PHONY: clean
-clean:
-	rm ${OBJ} $(ARQ:.c=.d)
