@@ -13,10 +13,8 @@ all: $(TLIB)
 	mv $(TLIB) $(TDIR)
 
 $(TLIB): $(OBJ)
-	$(CC) $(LDFLAGS) -lm -o $@ $^
-
-$(ARQ:.c=.d):%.d:%.c
-	$(CC) $(CLAFGS) -lm -MM $< >$@
+	$(CC) $(LDFLAGS) -lm -o $@ $^; \
+	$(CC) teste.c -o teste -ltp2so
 
 .PHONY: clean
 clean:

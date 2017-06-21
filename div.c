@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int div(int x, int y) {
-	int z = y == 0 ? x/y: 0;
+	int z = y == 0 ? 0: x/y;
 	return z;
 }
